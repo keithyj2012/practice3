@@ -7,6 +7,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Triads from "./components/Triads/Triads";
 import Pent from "./components/Pent/Pent";
 import Navigation from "./components/UI/Navigation/Navigation";
+import Fre from "./components/Fre/Fre";
 import styles from './App.module.css'
 import WelcomeModal from "./components/UI/WelcomeModal/WelcomeModal";
 import {Route, Routes} from "react-router-dom";
@@ -44,6 +45,10 @@ function App() {
             <Route path="/about" element ={<div>TEST</div>} />
         </Routes>
         {firstVisit && <WelcomeModal onClose={updateFirstVisit}></WelcomeModal>}
+    <Container style={{width: "300px"}}>
+        <Fre></Fre>
+    </Container>
+
     </React.Fragment>
   );
 }

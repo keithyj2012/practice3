@@ -55,10 +55,10 @@ const Triads = (props) => {
         <Container fluid className={`${props.className} ps-3 pe-3 pt-3`}>
             <Row className={`mb-3`}>
                 <Col style={{flex: "0"}}>
-                    <DropdownCustom name="Maj" items={mkeys} update={updateMkeysSelector}></DropdownCustom>
+                    <DropdownCustom name="Maj" items={mkeys} update={updateMkeysSelector} defaultName="Maj"></DropdownCustom>
                 </Col>
                 <Col style={{flex: "0"}}>
-                    <DropdownCustom name="Loc" items={items} update={updateStringSelector}></DropdownCustom>
+                    <DropdownCustom name="Loc" items={items} update={updateStringSelector} defaultName="1"></DropdownCustom>
                 </Col>
             </Row>
             <Row className={`flex-nowrap`}>

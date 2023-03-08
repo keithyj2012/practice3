@@ -4,25 +4,30 @@ import styles from './Navigation.module.css';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import Container from 'react-bootstrap/Container';
+import { NavLink, useLocation} from "react-router-dom";
+
 
 const Navigation = () => {
 
     return(
-        <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
-            <Container>
-                <Navbar.Brand href="#home">TEST</Navbar.Brand>
+            <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark" className={`pl-3 pr-3`}>
+                <Navbar.Brand style={{color: "green"}}>TEST</Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="me-auto">
                         {/*<Nav.Link href="#features">Test2</Nav.Link>*/}
-                        <Nav.Link href="#triads">Triads</Nav.Link>
+
+                        <Nav.Link><NavLink className={"nav-link"} to="/triads">Triads</NavLink></Nav.Link>
+
+                        <Nav.Link><NavLink className={"nav-link"} to="/pent">Pent</NavLink></Nav.Link>
+
+                        {/*<Nav.Link><NavLink className={"nav-link"} to="/eTest">eTEST</NavLink></Nav.Link>*/}
                     </Nav>
                     <Nav>
-                        <Nav.Link href="#deets">About</Nav.Link>
+                        <Nav.Link><NavLink className={"nav-link"} to="/about">About</NavLink></Nav.Link>
                     </Nav>
                 </Navbar.Collapse>
-            </Container>
-        </Navbar>
+            </Navbar>
     );
 }
 

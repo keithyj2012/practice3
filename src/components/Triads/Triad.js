@@ -8,8 +8,8 @@ const Triad = (props) => {
             {props.triads.map(triad =>
             <Col className={styles.triad}>
                 {triad.value}
-                <div style={{height: '50px'}}>
-                    Picture
+                <div style={{height: '50px', border: 'solid black 1px'}}>
+                   <p>{triad.mkey}</p>
                 </div>
             </Col>)}
         </React.Fragment>

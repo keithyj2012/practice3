@@ -4,67 +4,41 @@ import styles from './Fre.module.css';
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Container from 'react-bootstrap/Container'
+import NodeFre from "./NodeFre/NodeFre";
+import StrFre from "./StrFre/StrFre";
 
-const Fre = () => {
+const Fre = (props) => {
+
+    let stringsHtml = [];
+    let strings = ["E_h", "B", "G", "D", "A", "E_l" ];
+
+    strings.forEach(string => {
+
+        if(string == "E_h"){
+            if(props.info && props.info[string]){
+                // with string information
+                stringsHtml.push(<StrFre info={props.info[string]} />)
+            } else {
+                stringsHtml.push(<StrFre />)
+            }
+        } else {
+            if(props.info && props.info[string]){
+                // with string information
+                stringsHtml.push(<StrFre info={props.info[string]} borderStyle="border border-1"/>)
+            } else {
+                stringsHtml.push(<StrFre borderStyle="border border-1"/>)
+            }
+        }
+
+    })
+
+
     return (
         <React.Fragment>
-            <Container className="container text-center">
-                <Row style={{maxHeight: "25px"}}>
-                    <Col className="border border-1" style={{maxHeight: "25px"}}>
-                        <span className={styles.circle}><div style={{verticalAlign: "middle", display: "inline-block", height: "100%", lineHeight: '5px'}}>R</div></span>
-                    </Col>
-                    <Col className="border border-1"></Col>
-                    <Col className="border border-1"></Col>
-                    <Col className="border border-1">
-                        <span className="circle"></span>
-                    </Col>
-                    <Col className="border border-1"></Col>
-                    <Col className="border border-1"></Col>
-                </Row>
-                <Row style={{height: "25px"}}>
-                    <Col className="border"></Col>
-                    <Col className="border"></Col>
-                    <Col className="border"></Col>
-                    <Col className="border"></Col>
-                    <Col className="border"></Col>
-                    <Col className="border"></Col>
-                </Row>
-                <Row style={{height: "25px"}}>
-                    <Col className="border"></Col>
-                    <Col className="border"></Col>
-                    <Col className="border"></Col>
-                    <Col className="border"></Col>
-                    <Col className="border"></Col>
-                    <Col className="border"></Col>
-                </Row>
-                <Row style={{height: "25px"}}>
-                    <Col className="border"></Col>
-                    <Col className="border"></Col>
-                    <Col className="border"></Col>
-                    <Col className="border"></Col>
-                    <Col className="border"></Col>
-                    <Col className="border"></Col>
-                </Row>
-                <Row style={{height: "25px"}}>
-                    <Col className="border"></Col>
-                    <Col className="border"></Col>
-                    <Col className="border"></Col>
-                    <Col className="border"></Col>
-                    <Col className="border"></Col>
-                    <Col className="border"></Col>
-                </Row>
-                <Row style={{height: "25px"}}>
-                    <Col className="border"></Col>
-                    <Col className="border"></Col>
-                    <Col className="border"></Col>
-                    <Col className="border"></Col>
-                    <Col className="border"></Col>
-                    <Col className="border"></Col>
-                </Row>
-
+            <Container className="container text-center" style={{maxWidth: "300px"}}>
+                {/*<StrFre info={{1: {name: "R", color: "yellow"}, 2: {name: "2", color: "yellow"}}}/>*/}
+                {stringsHtml}
             </Container>
-
-
         </React.Fragment>
     );
 }

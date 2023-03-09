@@ -17,7 +17,7 @@ const Navigation = () => {
                     <Nav className="me-auto">
                         {/*<Nav.Link href="#features">Test2</Nav.Link>*/}
 
-                        <Nav.Link><NavLink className={"nav-link"} to="/triads">Triads</NavLink></Nav.Link>
+                        <Nav.Link><NavLink className={"nav-link"} to="/triads">T</NavLink></Nav.Link>
 
                         <Nav.Link><NavLink className={"nav-link"} to="/pent">Pent</NavLink></Nav.Link>
 

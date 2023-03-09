@@ -46,7 +46,7 @@ function App() {
         </Routes>
         {firstVisit && <WelcomeModal onClose={updateFirstVisit}></WelcomeModal>}
     <Container style={{width: "300px"}}>
-        <Fre></Fre>
+        <Fre info={{"D": {0: "R"}, "E_h": {1: "2"}, "A":{2: "1"}, "E_l": {2: "3"}}}></Fre>
     </Container>
 
     </React.Fragment>

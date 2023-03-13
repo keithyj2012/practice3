@@ -35,7 +35,7 @@ const Fre = (props) => {
 
     return (
         <React.Fragment>
-            <Container className="container text-center" style={{maxWidth: "300px"}}>
+            <Container className="container text-center" style={{minWidth: "300px", maxWidth: "300px"}}>
                 {/*<StrFre info={{1: {name: "R", color: "yellow"}, 2: {name: "2", color: "yellow"}}}/>*/}
                 {stringsHtml}
             </Container>

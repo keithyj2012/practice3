@@ -61,7 +61,7 @@ const Triads = (props) => {
                     <DropdownCustom name="Loc" items={items} update={updateStringSelector} defaultName="1"></DropdownCustom>
                 </Col>
             </Row>
-            <Row className={`flex-nowrap`}>
+            <Row>
                 {/*triads={triads.filter(triad => triad.value === stringSelector)}*/}
                 <Triad triads={triads.filter(triad => ((triad.value == triadState.value) && (triad.mkey == triadState.mkey)))}></Triad>
             </Row>

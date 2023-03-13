@@ -52,7 +52,7 @@ const Triads = (props) => {
     }
 
     return (
-        <Container fluid className={`${props.className} ps-3 pe-3 pt-3`}>
+        <Container fluid className={`${props.className} ps-3 pe-3 pt-3 pb-5`}>
             <Row className={`mb-3`}>
                 <Col style={{flex: "0"}}>
                     <DropdownCustom name="Maj" items={mkeys} update={updateMkeysSelector} defaultName="Maj"></DropdownCustom>
